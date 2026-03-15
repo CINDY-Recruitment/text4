@@ -152,16 +152,27 @@
             transform: translateY(-2px);
         }
         
-        /* 横幅 - 铺满整个容器，不裁剪图片 */
-        .banner {
-            position: relative;
-            background: url('https://i.imgs.ovh/2026/03/15/Ogkw1M.png') center/cover;
-            border-radius: var(--radius);
-            margin-bottom: 30px;
-            overflow: hidden;
-            height: 300px;
-            width: 100%;
-        }
+
+/* 横幅 - 铺满整个容器，不裁剪图片 */
+.banner {
+    position: relative;
+    background: url('https://i.imgs.ovh/2026/03/15/Ogkw1M.png') center/cover; /* 修改了background-size */
+    border-radius: var(--radius);
+    margin-bottom: 30px;
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    /* ... 其他媒体查询内的样式保持不变 ... */
+    .banner {
+        height: 200px;
+        /* 新增：为移动端指定新图片 */
+        background-image: url('https://i.imgs.ovh/2026/03/15/OgqUtm.png');
+    }
+}
+
         
         /* 页面容器 */
         .page {
